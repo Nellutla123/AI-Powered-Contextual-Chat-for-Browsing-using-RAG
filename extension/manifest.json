@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome RAG Plugin",
+  "version": "1.0",
+  "description": "Chat with any web page using RAG and local vector storage.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open RAG Chat"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
