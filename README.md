@@ -32,7 +32,6 @@ A browser-based RAG (Retrieval-Augmented Generation) system that allows you to c
     Create a `.env` file in the `backend/` directory with the following:
     ```env
     OPENROUTER_API_KEY=your_api_key_here
-    PINECONE_API_KEY=your_pinecone_key_if_needed
     ```
 5.  Run the Backend Server:
     ```bash
